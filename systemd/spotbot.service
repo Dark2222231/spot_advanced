@@ -1,0 +1,14 @@
+[Unit]
+Description=Spot Advanced Telegram Bot
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/spotbot
+EnvironmentFile=/home/ubuntu/spotbot/.env
+ExecStart=/home/ubuntu/spotbot/venv/bin/python /home/ubuntu/spotbot/spot_advanced_bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

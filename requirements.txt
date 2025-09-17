@@ -1,0 +1,6 @@
+python-binance==1.0.15
+python-telegram-bot==20.6
+ta==0.10.1
+pandas==2.2.2
+numpy==1.26.4
+aiohttp==3.8.5
