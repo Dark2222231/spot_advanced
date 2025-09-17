@@ -32,12 +32,13 @@ from ta.trend import EMAIndicator, MACD
 from ta.momentum import RSIIndicator
 from ta.volatility import BollingerBands, AverageTrueRange
 from ta.volume import OnBalanceVolumeIndicator
-from binance import AsyncClient, BinanceSocketManager, BinanceAPIException
+from binance import AsyncClient, BinanceSocketManager
+from binance.exceptions import BinanceAPIException
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
 
 # ---------------- CONFIG ----------------
-TELEGRAM_BOT_TOKEN = os.getenv("8023843301:AAFlSOS-rR141haOeF-21wt2ldemgJoASOQ")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "REPLACE_ME")
 DEFAULT_INTERVAL = "15m"   # base timeframe for user choice (can be 15m,1h, etc)
 HIGHER_TFS = {"15m": ["1h", "4h"], "1h": ["4h", "1d"], "4h": ["1d"], "1d": []}
 CANDLES_HISTORY = 500
